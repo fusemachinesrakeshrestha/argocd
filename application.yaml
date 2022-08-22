@@ -18,6 +18,4 @@ spec:
     syncOptions:
     - CreateNamespace=true # Create the myapp namespace if it doesnt exits.
 
-    automated:
-      selfHeal: true # Automatically sync changes from the Git repository.
-      prune: true # ArgoCD will delete this application if the configuration settings are deleted from Git.
+    automated: {}
