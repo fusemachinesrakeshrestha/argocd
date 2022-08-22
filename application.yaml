@@ -16,6 +16,4 @@ spec:
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true # Create the myapp namespace if it doesnt exits.
-
-    automated: {}
+    -  ApplyOutOfSyncOnly=true
