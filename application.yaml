@@ -16,4 +16,8 @@ spec:
 
   syncPolicy:
     syncOptions:
-    -  ApplyOutOfSyncOnly=true
+    - Validate=true
+    - CreateNamespace=true
+    - PrunePropagationPolicy=foreground
+    - PruneLast=true
+    - ApplyOutOfSyncOnly=true
