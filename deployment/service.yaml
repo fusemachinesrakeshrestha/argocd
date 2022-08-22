@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myvueapp-service # Set the name of the service
+spec:
+  selector:
+    app: myvueapp
+  ports:
+  - port: 8000 # Set the service port
+    protocol: TCP
+    targetPort: 80 # Set the service target port

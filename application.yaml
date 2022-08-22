@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application 
+metadata:
+  name: myapp-argo-application # Name of the application.
+  namespace: argocd # The namespace where the application should be created.
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/fusemachinesrakeshrestha/argocd # Remote Github repository where ArgoCD should pull configurations from.
+    targetRevision: HEAD # The last commit in the remote repository.
+    path: deployment # Track and sync the dev path in the repository.
+  destination: 
+    server: https://kubernetes.default.svc # Address of the Kubernetes cluster.
+    namespace: myapp # Indicates that ArgoCD should apply the configurations from the git repository to the myapp namespace.
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true # Create the myapp namespace if it doesnt exits.
+
+    automated:
+      selfHeal: true # Automatically sync changes from the Git repository.
+      prune: true # ArgoCD will delete this application if the configuration settings are deleted from Git.
