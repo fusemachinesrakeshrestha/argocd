@@ -16,7 +16,9 @@ spec:
 
   syncPolicy:
     syncOptions:
-    - Validate=true
-    - CreateNamespace=true
-    - PrunePropagationPolicy=foreground
-    - PruneLast=true
+    - CreateNamespace=true # Create the myapp namespace if it doesnt exits.
+
+    automated:
+      selfHeal: true # Automatically sync changes from the Git repository.
+      prune: true
+    
