@@ -3,12 +3,6 @@ kind: Application
 metadata:
   name: myapp-argo-application # Name of the application.
   namespace: argocd # The namespace where the application should be created.
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: myalias=devopsrakeshrestha/argocd
-    argocd-image-updater.argoproj.io/devopsrakeshrestha/argocd.update-strategy: latest
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
-    argocd-image-updater.argoproj.io/git-branch: master                                          
-    argocd-image-updater.argoproj.io/myalias.force-update: "true"
 spec:
   project: default
 
