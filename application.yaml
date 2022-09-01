@@ -6,6 +6,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: docker.io/devopsrakeshrestha/argocd
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds           
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
     argocd-image-updater.argoproj.io/git-branch: master                                       
 spec:
   project: default
