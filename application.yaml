@@ -11,7 +11,7 @@ spec:
     path: deployment # Track and sync the dev path in the repository.
   destination: 
     server: https://kubernetes.default.svc # Address of the Kubernetes cluster.
-    namespace: myapp # Indicates that ArgoCD should apply the configurations from the git repository to the myapp namespace.
+    namespace: argocd # Indicates that ArgoCD should apply the configurations from the git repository to the myapp namespace.
 
   syncPolicy:
     syncOptions:
