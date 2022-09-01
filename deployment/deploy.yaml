@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: myvueapp
-  replicas: 2 # Set the number of pods
+  replicas: 1 # Set the number of pods
   template: 
     metadata:
       labels: 
