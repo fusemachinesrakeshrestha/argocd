@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - devopsrakeshrestha/argocd:v.2.0.0
