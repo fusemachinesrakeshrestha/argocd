@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myvueapp # Sets the container name
-        image: devopsrakeshrestha/argocd:1.3 # Sets the container image
+        image: devopsrakeshrestha/argocd:1.0 # Sets the container image
         ports:
         - containerPort: 8000 # Exposes container port                              
