@@ -3,13 +3,14 @@ kind: Application
 metadata:
   name: myapp-argo-application # Name of the application.
   namespace: argocd # The namespace where the application should be created.
-  #annotations:
-    #argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
-    #argocd-image-updater.argoproj.io/git-branch: master
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: devopsrakeshrestha/argocd:~2
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    argocd-image-updater.argoproj.io/git-branch: master
     #argocd-image-updater.argoproj.io/myapp.force-update: "true"
     #argocd-image-updater.argoproj.io/image-list: devopsrakeshrestha/argocd:~2
     #argocd-image-updater.argoproj.io/update-strategy: digest
-    #argocd-image-updater.argoproj.io/pull-secret: pullsecret:argocd/dockerhub-creds                              
+    argocd-image-updater.argoproj.io/pull-secret: pullsecret:argocd/dockerhub-creds                              
 spec:
   project: default
   source:
