@@ -10,7 +10,7 @@ metadata:
     #argocd-image-updater.argoproj.io/myapp.force-update: "true"
     #argocd-image-updater.argoproj.io/image-list: devopsrakeshrestha/argocd:~2
     #argocd-image-updater.argoproj.io/update-strategy: digest
-    argocd-image-updater.argoproj.io/pull-secret: secret:argocd/dockerhub-creds                            
+    argocd-image-updater.argoproj.io/devopsrakeshrestha/argocd.pull-secret: secret:argocd/dockerhub-creds                            
 spec:
   project: default
   source:
