@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - ibanez6123/argo-test:1.1
+  - ibanez6123/argo-test:1.2
